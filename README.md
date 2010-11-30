@@ -25,13 +25,13 @@ To do this, you simply need to include the notifications view inside of your own
 
     <?php print View::factory()->render('notifications'); ?>
 
-You'll notice that the class is set to error on the notification's list item. This is simply the second argument passed to **Notifications::append()**. You can use any arbitrary string as a classname, or you can leave the second argument empty.
+You'll notice that the class is set to error on the notification's list item. This is simply the second argument passed to **Notifications::append()**. You can use any arbitrary string as a classname, or you can leave the second argument empty. In the case that you don't provide the class argument, the default value is notify. Of course, you can always change this with a custom copy of *modules/notifications/config/notifications.php* in your *application/config/* folder.
 
-If you prefer not to use the predefined view, you can always access the notifications list with this line of code:
+Furthermore, if you prefer not to use the predefined view, you can always access the notifications list with this line of code:
 
     $notifications = Notifications::get();
 
-Now, your notifications variable will be an array. If there aren't any notifications to display for the current session, then *$notifications* will be an empty array. Otherwise, every item in the $notifications array represents a single notification related to the current session.
+Now, your *$notifications* variable will be an array. If there aren't any notifications to display for the current session, then *$notifications* will be empty. Otherwise, every item in the $notifications array will be a notification object representing a single notification related to the current session.
 
 A notification is a basic object with the following properties:
 
