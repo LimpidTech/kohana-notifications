@@ -15,7 +15,7 @@ However, sometimes your profile might not save. Maybe due to an error, or some o
 
     Notifications::append('Error updating your profile.', 'error');
 
-This will create a notification with the 'error' class, and if you use the default notifications list view in your own applications - you'll get a list like this from it.
+This will create a notification with the 'error' class, and if you use the default notifications list view in your own applications - you'll get a list like this from it:
 
     <ul id="notifications">
     	<li class="error">Error updating your profile.</li>
