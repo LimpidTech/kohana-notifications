@@ -8,12 +8,9 @@ class Notifications_Notifications {
 			$class = Kohana::Config('notifications.default_class');
 
 		$session = Session::instance();
-		$notifications = $session->get('notifications', null);
+		$notifications = $session->get('notifications', Array());
 
-		if ($notifications === null)
-			$notifications = Array();
-		else
-			$notifications = unserialize($notifications);
+		$notifications = unserialize($notifications);
 
 			// Create an object to represent our notification
 		$notification = new StdClass;
@@ -29,19 +26,18 @@ class Notifications_Notifications {
 	static public function get()
 	{
 		$session = Session::instance();
-		$notifications = $session->get('notifications', null);
+		$notifications = $session->get('notifications', Array());
 
-		if ($notifications !== null)
-		{
-			$notifications = unserialize($notifications);
-			$session->set('notifications', null);
+		$notifications = unserialize($notifications);
 
-			return $notifications;
-		}
-		else
-		{
-			return null;
-		}
+		Notifications::clear();
+
+		return $notifications;
+	}
+
+	static public function clear()
+	{
+		$session->set('notifications', Array());
 	}
 
 }
