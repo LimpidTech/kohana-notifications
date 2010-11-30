@@ -2,8 +2,11 @@
 
 class Notifications_Notifications {
 
-	static public function append($message, $class='notice')
+	static public function append($message, $class=null)
 	{
+		if ($class === null)
+			$class = Kohana::Config('notifications.default_class');
+
 		$session = Session::instance();
 		$notifications = $session->get('notifications', null);
 
