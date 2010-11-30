@@ -21,7 +21,7 @@ This will create a notification with the 'error' class, and if you use the defau
     	<li class="error">Error updating your profile.</li>
     </ul>
 
-To do this, simply need to include the notifications view inside of your own view. This is easily done with the following line of code:
+To do this, you simply need to include the notifications view inside of your own view. This is easily done with the following line of code:
 
     <?php print View::factory()->render('notifications'); ?>
 
