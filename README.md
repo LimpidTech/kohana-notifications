@@ -3,7 +3,7 @@
 
 ## What is it?
 
-This is a very basic application for displaying user notifications in the kohana framework. Notifications are useful displaying different data to users after events happen. For instance, when someone submits to update their profile - you might want the function saving the profile to create a notification saying "Your profile has been updated."
+This is a very basic application for displaying user notifications in the kohana framework. Notifications are useful for displaying different data to users after events happen. For instance, when someone submits to update their profile - you might want the function saving the profile to create a notification saying "Your profile has been updated."
 
 ## Getting started
 
