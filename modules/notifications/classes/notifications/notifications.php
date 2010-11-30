@@ -20,8 +20,6 @@ class Notifications_Notifications {
 
 		array_push($notifications, $notification);
 
-		die(var_dump($notifications));
-
 		$session->set('notifications', serialize($notifications));
 	}
 
