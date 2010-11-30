@@ -7,7 +7,7 @@ This is a very basic application for displaying user notifications in the kohana
 
 ## Getting started
 
-The previously described situation is an extremely basic task with this module. It takes one line of code after you save the method.
+The previously described situation is an extremely basic task with this module. It takes one line of code within your save method.
 
     Notifications::append('Your profile has been updated.');
 
