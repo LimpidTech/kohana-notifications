@@ -31,7 +31,7 @@ If you prefer not to use the predefined view, you can always access the notifica
 
     $notifications = Notifications::get();
 
-Now, your notifications variable will be an array if notifications are present. If there aren't any notifications to display for the current session, then *$notifications* will be set to null.
+Now, your notifications variable will be an array if notifications are present. If there aren't any notifications to display for the current session, then *$notifications* will be an empty array.
 
 Every item in the $notifications array represents a single notification. A notification is a basic object with the following properties:
 

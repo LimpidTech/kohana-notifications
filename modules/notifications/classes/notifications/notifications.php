@@ -8,7 +8,7 @@ class Notifications_Notifications {
 			$class = Kohana::Config('notifications.default_class');
 
 		$session = Session::instance();
-		$notifications = $session->get('notifications', Array());
+		$notifications = $session->get('notifications', serialize(Array()));
 
 		$notifications = unserialize($notifications);
 
@@ -20,13 +20,15 @@ class Notifications_Notifications {
 
 		array_push($notifications, $notification);
 
+		die(var_dump($notifications));
+
 		$session->set('notifications', serialize($notifications));
 	}
 
 	static public function get()
 	{
 		$session = Session::instance();
-		$notifications = $session->get('notifications', Array());
+		$notifications = $session->get('notifications', serialize(Array()));
 
 		$notifications = unserialize($notifications);
 
@@ -37,7 +39,7 @@ class Notifications_Notifications {
 
 	static public function clear()
 	{
-		$session->set('notifications', Array());
+		Session::instance()->set('notifications', serialize(array()));
 	}
 
 }
