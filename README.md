@@ -11,7 +11,7 @@ The previously described situation is an extremely basic task with this module. 
 
     Notifications::append('Your profile has been updated.');
 
-However, sometimes your profile might not save. Maybe due to an error, or some other circumstance. Notifications are also a good way to let you know about a situation where something bad happened. Take this for example:
+However, sometimes your profile might not save. Maybe due to an error, or some other circumstance. Notifications are also a good way to let your user know about a situation where something bad happened. Take this for example:
 
     Notifications::append('Error updating your profile.', 'error');
 
